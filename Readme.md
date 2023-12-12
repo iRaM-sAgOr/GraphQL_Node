@@ -47,3 +47,17 @@ query ExampleQuery {
 }
 
 NB: Can user localhost:4001 for the apollo sandbox
+
+
+2. Mutation for Delete entry
+-- Create a schema for Mutation with deleteGame,
+-- Create the resolver with the Mutation and deleteGame function
+
+Query:
+mutation deleteMutation($id: ID!){
+  deleteGame(id: $id) {
+    title,
+    platform,
+    id
+  }
+}

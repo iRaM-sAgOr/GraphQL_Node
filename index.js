@@ -30,6 +30,12 @@ const resolvers = {
       return db.reviews.find((review) => review.id === args.id);
     },
   },
+  Mutation: {
+    deleteGame(_, args) {
+      db.games = db.games.filter(g => g.id != args.id)
+      return db.games;
+    }
+  }
 };
 
 // configurations
