@@ -61,3 +61,26 @@ mutation deleteMutation($id: ID!){
     id
   }
 }
+
+3. Mutation for Create entry
+-- Create the schema for create new entry
+-- Create the resolver
+
+Query:
+mutation addMutation($game: AddGameInput!){
+  addGame(game: $game) {
+    id,
+    title,
+    platform
+  }
+}
+
+Payload:
+{
+  "game": {
+    "title": "New Title",
+    "platform": [
+      "New Platform"
+    ]
+  }
+}
